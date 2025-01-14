@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069384133393",
+    "project_id": "app-cortijo-los-agustinos",
+    "storage_bucket": "app-cortijo-los-agustinos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069384133393:android:d01a9acea11dfd3d263ab0",
+        "android_client_info": {
+          "package_name": "com.cortijo.app.cortijo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEPb4ooxNA3b0AZTXuzxEohdgayo1tWpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
