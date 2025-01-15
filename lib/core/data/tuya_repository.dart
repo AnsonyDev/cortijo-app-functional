@@ -23,4 +23,16 @@ class TuyaRepository {
     );
     return res["result"] as bool;
   }
+
+  Future<bool> deleteCount() async {
+    bool res = false;
+    try{
+      await apiClient.deleteRequest(
+        '$BASE_API_URL/api/user',
+        customHeaders: allHeaders,
+      );
+      res = true;
+    }catch(_){}
+    return res;
+  }
 }

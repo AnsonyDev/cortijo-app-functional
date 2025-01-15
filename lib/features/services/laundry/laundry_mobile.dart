@@ -184,12 +184,18 @@ class _Page3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    String? photo = model.product!.photo;
+    if(photo == null || photo.isEmpty){
+      photo = model.service!.service!.photo!;
+    }
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
       physics: const BouncingScrollPhysics(),
       children: [
         DescriptionServiceCard(
-          img: model.service!.service!.photo!,
+          img: photo,
           desc: '',
         ),
         ItemCardService(children: [

@@ -100,7 +100,20 @@ class _PerfilMobile extends StatelessWidget {
                   const SizedBox(width: 20),
                 ],
               ),
-            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
+              child: AppButton(
+                onPressed: () async {
+                  if(await showDialogMessage(context)){
+                    model.deleteUser();
+                  }
+                },
+                isLoading: model.loadDelete,
+                text: 'Eliminar cuenta',
+                color: AppColors.white,
+                colorText: AppColors.oliveGreen,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
               child: AppButton(
@@ -113,6 +126,60 @@ class _PerfilMobile extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Future<bool> showDialogMessage(BuildContext context) async {
+    return await showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                spacerM,
+                const AppTitle(text: 'Eliminar cuenta'),
+                spacerS,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .50,
+                  child: const Text(
+                    '''¿Confirmas que deseas eliminar tu cuenta? Se borrará de forma permanente''',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                spacerS,
+                SizedBox(
+                  height: 35,
+                  child: AppButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(false);
+                    },
+                    text: 'Cancelar',
+                    color: AppColors.oliveGreen,
+                    colorText: AppColors.white,
+                  ),
+                ),spacerS,
+                SizedBox(
+                  height: 35,
+                  child: AppButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(true);
+                    },
+                    text: 'Entendido',
+                    color: AppColors.oliveGreen,
+                    colorText: AppColors.white,
+                  ),
+                ),
+                spacerM,
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

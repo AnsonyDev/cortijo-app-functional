@@ -15,6 +15,10 @@ class PerfilViewModel extends BaseViewModel {
   bool openingGate = false;
   bool closingGate = false;
 
+  bool _loadDelete = false;
+  bool get loadDelete => _loadDelete;
+  set loadDelete(bool value) { _loadDelete = value; notifyListeners(); }
+
   PerfilViewModel(this._userRepository, this._tuyaRepository);
 
   Future logOut() async {
@@ -57,6 +61,21 @@ class PerfilViewModel extends BaseViewModel {
     });
     closingGate = false;
     notifyListeners();
+  }
+
+  Future<void> deleteUser() async {
+    loadDelete = true;
+    try{
+      await _tuyaRepository.deleteCount();
+      await LocalDataRepository().logOut();
+      loadDelete = false;
+      locator<AppRouter>().pushAndPopUntil(
+        const WelcomeView(),
+        predicate: (_) => false,
+      );
+    }catch(_){
+      loadDelete = false;
+    }
   }
 }
 
