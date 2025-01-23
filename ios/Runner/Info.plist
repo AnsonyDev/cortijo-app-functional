@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Cortijo necesita acceder a tus fotografias para capturar la imagen de tu documento de identidad.</string>
+	<string>Retiros necesita acceder a tus fotografias para capturar la imagen de tu documento de identidad.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Cortijo necesita acceder a la camara para capturar la imagen de tu documento de identidad.</string>
+	<string>Retiros necesita acceder a la camara para capturar la imagen de tu documento de identidad.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Cortijo</string>
+	<string>Retiros</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

@@ -25,7 +25,7 @@ class ServicesCortijosWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const TittleHome(tittle: 'Servicios Cortijo'),
+          const TittleHome(tittle: 'Servicios Retiros'),
           model.loadingServices
               ? const Expanded(
                   child: MyShimmer(

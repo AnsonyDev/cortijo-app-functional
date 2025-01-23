@@ -63,7 +63,7 @@ class _MainApplicationState extends State<MainApplication> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Cortijo',
+      title: 'Retiros',
       routerDelegate: AutoRouterDelegate(router),
       routeInformationParser: router.defaultRouteParser(),
       scaffoldMessengerKey: scaffoldKey,

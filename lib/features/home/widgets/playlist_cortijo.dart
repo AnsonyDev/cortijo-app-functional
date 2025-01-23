@@ -15,7 +15,7 @@ class PlaylistCortijo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TittleHome(tittle: 'Playlist Cortijo'),
+        const TittleHome(tittle: 'Playlist Retiros'),
         GestureDetector(
           onTap: () => launchUrlString(
               'https://open.spotify.com/playlist/6hm93VVek2wMos2OtIu1nQ?si=d77af3deb3164561&pt=35226e47fd94a6f245ab8c48360920ec',
