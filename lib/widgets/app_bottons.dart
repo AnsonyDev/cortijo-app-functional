@@ -110,13 +110,13 @@ class AppOvalButton extends StatelessWidget {
     required this.onPressed,
     required this.text,
     required this.colorButton,
-    this.colorText,
+    this.colorText = Colors.white,
     Key? key,
   }) : super(key: key);
 
   final String text;
   final Color colorButton;
-  final Color? colorText;
+  final Color colorText;
   final void Function()? onPressed;
 
   @override
