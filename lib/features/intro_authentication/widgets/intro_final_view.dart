@@ -45,7 +45,7 @@ class IntroFinal extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 130),
-                SvgPicture.asset('assets/icons/LOGO_BLANCO.svg', width: 150),
+                SvgPicture.asset('assets/icons/LOGO_BLANCO.svg', width: 150, color: Colors.white,),
                 // const Spacer(),
               ],
             ),

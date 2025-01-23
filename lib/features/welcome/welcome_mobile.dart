@@ -18,7 +18,7 @@ class _WelcomeMobile extends StatelessWidget {
                 const SizedBox(height: 200),
                 SvgPicture.asset(
                   model.logoWhite,
-                  width: 150,
+                  width: 150,color: Colors.white,
                 ),
                 const SizedBox(height: 30),
                 const Text(
